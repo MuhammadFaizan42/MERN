@@ -44,3 +44,29 @@ export const login = catchAsyncErrors(async (req,res,next)=>{
 
 });
 
+export const logout = catchAsyncErrors((req,res,next)=>{
+    res.status(200).cookie("token","",{
+        expires:new Date(Date.now()),
+        httpOnly:true,
+    }).json({
+        success:true,
+        message:"User  logged Out",
+    });
+
+
+});
+
+export const getMyProfile = catchAsyncErrors((req,res,next)=>{
+    const user = req.user;
+    res.status(200).json({
+        success:true,
+        user,
+    });
+});
+export const getAllAuthors = catchAsyncErrors(async(req,res,next)=>{
+    const authors = await User.find({role:"Author"});
+    res.status(200).json({
+        success:true,
+        authors,
+    });
+});
