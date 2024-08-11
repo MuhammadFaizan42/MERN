@@ -33,7 +33,7 @@ const App = () => {
       } catch (error) {
         console.log(error);
         setIsAuthenticated(false);
-        setUser({});
+        setUser(null);
       }
     };
     const fetchBlogs = async () => {
@@ -47,9 +47,10 @@ const App = () => {
         setBlogs([]);
       }
     };
-    fetchUser();
-    fetchBlogs();
-  },[isAuthenticated, user]);
+    
+      fetchUser();
+      fetchBlogs();
+  },[isAuthenticated]);
   return (
       <BrowserRouter>
         <Navbar />
