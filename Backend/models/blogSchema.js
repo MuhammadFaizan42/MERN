@@ -50,7 +50,7 @@ const blogSchema= new mongoose.Schema({
     },
     authorAvatar:{
         type:String,
-        required:true,
+        
     },
     published:{
         type:Boolean,

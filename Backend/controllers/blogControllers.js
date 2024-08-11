@@ -15,7 +15,7 @@ const allowedFormats =["image/png","image/jpeg","image/webp"];
 if(!allowedFormats.includes(mainImage.mimetype) || (paraOneImage && !allowedFormats.includes(mainImage.mimetype) ) ){
 return next (new ErrorHandler("invalid file Type only JPeg,PNG,WEBP",400));
 }
-const {title,intro,paraOneDec,paraOneTitle,category} =req.body;
+const {title,intro,paraOneDec,paraOneTitle,category,published} =req.body;
 const createdBY= req.user._id;
 const authorName=req.user.name;
 const authorAvatar=req.user.avatar.url;
@@ -79,6 +79,7 @@ export const getAllBlogs = catchAsyncErrors(async(req,res,next)=>{
     res.status(200).json({
         success:true,
         message:"All Published Blog",
+        allBlog
     });
 });
 

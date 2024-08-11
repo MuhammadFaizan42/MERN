@@ -11,7 +11,9 @@ const Home = () => {
   return (
       <article className={mode === "dark" ? "dark-bg" : "light-bg"}>
         <HeroSection />
-        
+        <TrendingBlogs />
+        <LatestBlog heading={"Latest Blogs"} blogs={filteredBlogs} />
+        <PopularAuthor />
       </article>
   );
 };
