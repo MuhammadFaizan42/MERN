@@ -14,7 +14,7 @@ const Navbar = () => {
     setShow(!show);
   };
   
-  const isDashboard = useLocation("http://localhost:3000/dashboard");
+  const isDashboard = useLocation("https://mern-snowy-gamma.vercel.app/dashboard");
   
   const { mode, setMode, isAuthenticated, user, setIsAuthenticated } = useContext(Context);
   
