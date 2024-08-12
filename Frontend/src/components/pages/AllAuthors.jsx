@@ -9,7 +9,7 @@ const AllAuthors = () => {
   useEffect(() => {
     const fetchAuthors = async () => {
       const { data } = await axios.get(
-        "http://localhost:4000/api/authors",
+        "https://mern-pq6d.vercel.app/api/authors",
         { withCredentials: true }
       );
       setAuthors(data.authors);
