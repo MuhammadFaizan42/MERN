@@ -50,7 +50,7 @@ const App = () => {
     
       fetchUser();
       fetchBlogs();
-  },[isAuthenticated]);
+  },[isAuthenticated,user]);
   return (
       <BrowserRouter>
         <Navbar />
