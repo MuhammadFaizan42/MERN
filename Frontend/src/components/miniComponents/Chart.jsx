@@ -29,7 +29,7 @@ const Chart = () => {
   useEffect(() => {
     const fetchMyBlogs = async () => {
       const { data } = await axios.get(
-        "http://localhost:4000/api/myblogs",
+        "https://mern-pq6d.vercel.app/api/myblogs",
         { withCredentials: true }
       );
       setMyBlogs(data.blog);
