@@ -41,7 +41,7 @@ const Register = () => {
 
     try {
       const { data } = await axios.post(
-        "http://localhost:4000/api/register",
+        "https://mern-pq6d.vercel.app/api/register",
         formData,
         {
           withCredentials: true,
