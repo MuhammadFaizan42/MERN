@@ -53,7 +53,7 @@ const CreateBlog = () => {
 
     try {
       const { data } = await axios.post(
-        "http://localhost:4000/api/blog",
+        "https://mern-pq6d.vercel.app/api/blog",
         formData,
         {
           withCredentials: true,
