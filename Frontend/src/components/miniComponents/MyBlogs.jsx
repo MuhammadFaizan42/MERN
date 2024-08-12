@@ -10,7 +10,7 @@ const MyBlogs = () => {
   useEffect(() => {
     const fetchMyBlogs = async () => {
       const { data } = await axios.get(
-        "http://localhost:4000/api/myblogs",
+        "https://mern-pq6d.vercel.app/api/myblogs",
         { withCredentials: true }
       );
       setMyBlogs(data.blog);
@@ -20,7 +20,7 @@ const MyBlogs = () => {
 
   const deleteBlogHandler = async (id) => {
     await axios
-      .delete(`http://localhost:4000/api/delete/${id}`, {
+      .delete(`https://mern-pq6d.vercel.app/api/delete/${id}`, {
         withCredentials: true,
       })
       .then((res) => {
