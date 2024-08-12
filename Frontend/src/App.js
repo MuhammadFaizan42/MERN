@@ -26,6 +26,7 @@ const App = () => {
           "https://mern-pq6d.vercel.app/api/myprofile",
           {
             withCredentials: true,
+             headers: { "Content-Type": "application/json" },
           }
         );
         setUser(data.user);
