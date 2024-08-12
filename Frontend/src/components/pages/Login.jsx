@@ -15,7 +15,7 @@ const Login = () => {
     e.preventDefault();
     await axios
       .post(
-        "http://localhost:4000/api/login",
+        "https://mern-pq6d.vercel.app/api/login",
         { email, password, role },
         {
           withCredentials: true,
