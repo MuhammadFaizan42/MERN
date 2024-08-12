@@ -21,7 +21,7 @@ const UpdateBlog = () => {
     const fetchBlog = async () => {
       try {
         const { data } = await axios.get(
-          `http://localhost:4000/api/singleblog/${id}`,
+          `https://mern-pq6d.vercel.app/api/singleblog/${id}`,
           { withCredentials: true }
         );
         setTitle(data.blog.title);
@@ -64,7 +64,7 @@ const UpdateBlog = () => {
 
     try {
       const { data } = await axios.put(
-        `http://localhost:4000/api/update/${id}`,
+        `https://mern-pq6d.vercel.app/api/update/${id}`,
         updatedBlog,
         { withCredentials: true }
       );
