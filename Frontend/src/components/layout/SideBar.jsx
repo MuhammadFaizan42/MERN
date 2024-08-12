@@ -17,7 +17,7 @@ const handleLogout = async (e) => {
     e.preventDefault();
     try {
     const { data } = await axios.get(
-        "http://localhost:4000/api/logout",
+        "https://mern-pq6d.vercel.app/api/logout",
         { withCredentials: true }
     );
     setIsAuthenticated(false);
