@@ -86,7 +86,7 @@ const Navbar = () => {
                 <MdDarkMode className="dark-icon" />
               )}
             </button>
-            {!isAuthenticated ? (
+            {isAuthenticated && user.role ? (
               <Link
                 to={"/dashboard"}
                 onClick={handleNavbar}
