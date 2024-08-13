@@ -1,3 +1,4 @@
+
 export const sendToken = (user,statusCode, message, res)=>{
 const token =user.getJWToken();
 const cookieExpireDays = parseInt(process.env.COOKIE_EXPIRE, 10);
@@ -7,6 +8,7 @@ const options = {
     expires: expiresDate,
     httpOnly: true,
     secure: true,
+    sameSite: 'None',
 
 };
 
