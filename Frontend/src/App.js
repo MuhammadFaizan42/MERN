@@ -26,8 +26,8 @@ const App = () => {
           "https://mern-pq6d.vercel.app/api/myprofile",
           {
             withCredentials: true,
-            'Authorization': `Bearer ${user.token}`
-             headers: { "Content-Type": "application/json" },
+            'Authorization': `Bearer ${user.token}`,
+             headers: { "Content-Type": "application/json" }
           }
         );
         setUser(data.user);
