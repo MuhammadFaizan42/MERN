@@ -6,6 +6,7 @@ const expiresDate = new Date(Date.now() + cookieExpireDays * 24 * 60 * 60 * 1000
 const options = {
     expires: expiresDate,
     httpOnly: true,
+    secure: true,
 };
 
 res.status(statusCode).cookie("token", token, options).json({
